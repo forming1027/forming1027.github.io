@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Hello World | A fifth century</title>
+  <title>docker从理解到安装再到简单使用三部曲 | A fifth century</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -171,28 +171,34 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2021-02-25T09:23:41.636Z" itemprop="datePublished">
-          2021-02-25
+      <time datetime="2021-03-03T14:02:55.000Z" itemprop="datePublished">
+          2021-03-03
       </time>
     
+    
+    | 
+    <a href='/tags/docker/'>docker</a>
+    
+    
 </span>
-                <h1>Hello World</h1>
+                <h1>docker从理解到安装再到简单使用三部曲</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+      		<h2 id="docker从理解到安装再到简单使用三部曲"><a href="#docker从理解到安装再到简单使用三部曲" class="headerlink" title="docker从理解到安装再到简单使用三部曲"></a>docker从理解到安装再到简单使用三部曲</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_53061933/article/details/113437249">第一步（docker的理解）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_53061933/article/details/113449847">第二部（docker安装）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_53061933/article/details/113450040">第三步（docker常用命令的总结）</a></p>
+<h2 id="docker的意义"><a href="#docker的意义" class="headerlink" title="docker的意义"></a>docker的意义</h2><ul>
+<li>&lt;1&gt;简说<br><strong>总的来说docker让数据传输更容易，同时让程序的运行不是很依赖环境，从而达到节约计算机资源的目的。</strong></li>
+<li>&lt;2&gt;细说<br>当你看到这些优点时，可能理解了docker存在的意义，但是又引出了新问题——怎么理解这些优点，或者说这些优点的具体体现是什么？让我们以一个程序开发者的身份看这些问题。如果你是一个软件的开发者，开发出了一款软件以后需要考虑什么？要考虑软件在不同系统上的适配问题。就像Java环境分linux版、mac版和windows版一样，不同环境软件不一样。这导致软件开发过程中，开发人员不止要考虑程序本身，还要考虑运行问题。这会增加开发人员的工作量，同时在人文上使“运维”和“开发”掰扯不清楚，导致“开发没问题，运行有问题”，让责任不明确。而docker的发明使开发者的工作量更小，同时解决了责任不明的问题。</li>
+</ul>
+<h2 id="docker的组成"><a href="#docker的组成" class="headerlink" title="docker的组成"></a>docker的组成</h2><p>docker可以理解为一个程序</p>
+<ul>
+<li>&lt;1&gt;组成一：镜像<br>既然docker是一个程序，那必然有存储的地方，在理解docker镜像时可以把镜像理解为磁盘文件，值得一提的是镜像本身有自己的分层结构。<a target="_blank" rel="noopener" href="https://blog.csdn.net/kevin_tech/article/details/104453918/?ops_request_misc=&request_id=&biz_id=102&utm_term=docker%25E7%259A%2584%25E9%2595%259C%25E5%2583%258F%25E5%258E%259F%25E7%2590%2586&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-5-104453918.pc_search_result_no_baidu_js">了解更多镜像知识</a></li>
+<li>&lt;2&gt;组成二：容器<br>有文件就要有在内存上运行的地方，容器就可以理解为一个或多个在内存上的进程。</li>
+<li>&lt;3&gt;组成三：仓库<br>所谓仓库就是储存镜像的地方，最大的公共镜像仓库就是Docker hub</li>
+</ul>
+<h2 id="docker的原理"><a href="#docker的原理" class="headerlink" title="docker的原理"></a>docker的原理</h2><p>docker要实现的话要依赖，linux namespace、linux cgroup等，他们分别实现镜像和容器的隔离，和计算机资源的合理运用。这里只做浅谈，想要了解的朋友请自行搜索。</p>
+<h2 id="docker与虚拟机的对比"><a href="#docker与虚拟机的对比" class="headerlink" title="docker与虚拟机的对比"></a>docker与虚拟机的对比</h2><p>拿虚拟机来说，要实现虚拟机要在硬件层(hardsware layer)之上要通过虚拟化软件(hypervisor)形成虚拟层(vitualization)并分化出不同区域，搭建出不同的系统(host os)，同时在虚拟层之上还有管理不同区域的工具——那VMware来说就是VMware workstation。docker则不必这么麻烦，因为他和实体计算机公用一套内核，所以占用资源较少。由此也可以发现，docker相比于虚拟机它与操作系统的联系更紧密。</p>
+<h2 id="docker从理解到安装再到简单使用三部曲-1"><a href="#docker从理解到安装再到简单使用三部曲-1" class="headerlink" title="docker从理解到安装再到简单使用三部曲"></a>docker从理解到安装再到简单使用三部曲</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_53061933/article/details/113437249">第一步（docker的理解）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_53061933/article/details/113449847">第二部（docker安装）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_53061933/article/details/113450040">第三步（docker常用命令的总结）</a></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
